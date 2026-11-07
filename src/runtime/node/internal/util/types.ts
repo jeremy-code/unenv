@@ -97,65 +97,66 @@ export const isModuleNamespaceObject = /*@__PURE__*/ notImplemented<
   typeof nodeUtilTypes.isModuleNamespaceObject
 >("util.types.isModuleNamespaceObject");
 
-export const isAnyArrayBuffer = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isAnyArrayBuffer
->("util.types.isAnyArrayBuffer");
+export const isAnyArrayBuffer: typeof nodeUtilTypes.isAnyArrayBuffer = (
+  val,
+): val is ArrayBufferLike =>
+  val instanceof ArrayBuffer || val instanceof SharedArrayBuffer;
 
 export const isBoxedPrimitive = /*@__PURE__*/ notImplemented<
   typeof nodeUtilTypes.isBoxedPrimitive
 >("util.types.isBoxedPrimitive");
 
-export const isArrayBufferView = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isArrayBufferView
->("util.types.isArrayBufferView");
+export const isArrayBufferView: typeof nodeUtilTypes.isArrayBufferView = (
+  val,
+): val is NodeJS.ArrayBufferView<ArrayBufferLike> => ArrayBuffer.isView(val);
 
 export const isTypedArray = /*@__PURE__*/ notImplemented<
   typeof nodeUtilTypes.isTypedArray
 >("util.types.isTypedArray");
 
-export const isUint8Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isUint8Array
->("util.types.isUint8Array");
+export const isUint8Array: typeof nodeUtilTypes.isUint8Array = (
+  val,
+): val is Uint8Array => val instanceof Uint8Array;
 
-export const isUint8ClampedArray = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isUint8ClampedArray
->("util.types.isUint8ClampedArray");
+export const isUint8ClampedArray: typeof nodeUtilTypes.isUint8ClampedArray = (
+  val,
+): val is Uint8ClampedArray => val instanceof Uint8ClampedArray;
 
-export const isUint16Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isUint16Array
->("util.types.isUint16Array");
+export const isUint16Array: typeof nodeUtilTypes.isUint16Array = (
+  val,
+): val is Uint16Array => val instanceof Uint16Array;
 
-export const isUint32Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isUint32Array
->("util.types.isUint32Array");
+export const isUint32Array: typeof nodeUtilTypes.isUint32Array = (
+  val,
+): val is Uint32Array => val instanceof Uint32Array;
 
-export const isInt8Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isInt8Array
->("util.types.isInt8Array");
+export const isInt8Array: typeof nodeUtilTypes.isInt8Array = (
+  val,
+): val is Int8Array => val instanceof Int8Array;
 
-export const isInt16Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isInt16Array
->("util.types.isInt16Array");
+export const isInt16Array: typeof nodeUtilTypes.isInt16Array = (
+  val,
+): val is Int16Array => val instanceof Int16Array;
 
-export const isInt32Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isInt32Array
->("util.types.isInt32Array");
+export const isInt32Array: typeof nodeUtilTypes.isInt32Array = (
+  val,
+): val is Int32Array => val instanceof Int32Array;
 
-export const isFloat32Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isFloat32Array
->("util.types.isFloat32Array");
+export const isFloat32Array: typeof nodeUtilTypes.isFloat32Array = (
+  val,
+): val is Float32Array => val instanceof Float32Array;
 
-export const isFloat64Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isFloat64Array
->("util.types.isFloat64Array");
+export const isFloat64Array: typeof nodeUtilTypes.isFloat64Array = (
+  val,
+): val is Float64Array => val instanceof Float64Array;
 
-export const isBigInt64Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isBigInt64Array
->("util.types.isBigInt64Array");
+export const isBigInt64Array: typeof nodeUtilTypes.isBigInt64Array = (
+  val,
+): val is BigInt64Array => val instanceof BigInt64Array;
 
-export const isBigUint64Array = /*@__PURE__*/ notImplemented<
-  typeof nodeUtilTypes.isBigUint64Array
->("util.types.isBigUint64Array");
+export const isBigUint64Array: typeof nodeUtilTypes.isBigUint64Array = (
+  val,
+): val is BigUint64Array => val instanceof BigUint64Array;
 
 export const isKeyObject = /*@__PURE__*/ notImplemented<
   typeof nodeUtilTypes.isKeyObject
